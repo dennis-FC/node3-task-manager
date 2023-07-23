@@ -1,5 +1,6 @@
 // CRUD create read update delete
 //D:/自學/mongodb/bin/mongod.exe --dbpath=D:/自學/mongodb-data --> run db server
+//C:/Users/denni/nodejs/mongodb/bin/mongod.exe --dbpath=C:/Users/denni/nodejs/mongodb-data
 
 // const mongodb = require('mongodb')
 // const MongoClient = mongodb.MongoClient
