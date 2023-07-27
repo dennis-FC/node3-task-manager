@@ -37,5 +37,5 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error,client) => 
     }).catch((error) => {
         console.log(error)
     })
-    console.log("test")
+    
 })
