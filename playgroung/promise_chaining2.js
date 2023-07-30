@@ -11,14 +11,13 @@ const { findByIdAndDelete } = require('../src/models/user')
 //     console.log(e)
 // })
 
-
-const DeletetaskCount = async (id,completed) => {
+const deleteAndCount = async (id,completed) => {
     const task = await Task.findByIdAndDelete(id)
     const count = await Task.countDocuments({completed})
     return count
 }
 
-DeletetaskCount('64c0676dfb00b3939039858d',false).then((count) => {
+deleteAndCount('64bc911c55480e104809d8b9',false).then((count) => {
     console.log(count)
 }).catch((e) => {
     console.log(e)
