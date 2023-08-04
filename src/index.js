@@ -6,14 +6,37 @@ const taskRouter = require('./routers/task')
 const app = express()
 const port = process.env.PORT || 3000
 
+// app.use((req,res,next) => {
+//     if(req.method === 'GET'){
+//         res.send('GET request are disable')
+//     }else{
+//         next()
+//     }
+// })
+
+// app.use((req,res,next) => {
+//     if(req.method){
+//         res.status(503).send('maintance')
+//     }else{
+//         next()
+//     }
+// })
+
 app.use(express.json())
 app.use(userRouter)
 app.use(taskRouter)
+
 
 app.listen(port, () => {
     console.log('Server is up on port ' + port)
 })
 
 
+const Task = require('./models/task')
 
+const main = async() => {
+    const task = await Task.findById('64caf28e900b0de3e21287e4')
+    //await 
+}
 
+main()
