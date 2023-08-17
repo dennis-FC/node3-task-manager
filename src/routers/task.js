@@ -81,7 +81,7 @@ router.patch('/tasks/:id',auth,async (req,res) => {
     }) 
 
     if(!isvalidOperation){
-        return res.send('error: unvalid update')
+        return res.status(400).send('error: unvalid update')
     }
 
     try{
